@@ -26,6 +26,7 @@ clean:
                 cd ../$$component; \
                 ${MAKE} clean;  \
         done; \
+	rm -fr ${COMPONENTS_DIR}
 	rm -fr ${BIN_DIR}
 
 install: ${BIN_DIR} all
