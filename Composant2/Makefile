@@ -15,8 +15,11 @@ all: $(LIBSO)
 clean:
 	rm -f ${LIBSO} ${DESTINATION_LIBSO} ${LIBSO_OBJS}
 
-install: ${DESTINATION_LIBSO}
+install: ${DESTINATION_DIR} ${DESTINATION_LIBSO}
 
 
 ${DESTINATION_LIBSO}: ${LIBSO}
 	cp $< $@
+
+${DESTINATION_DIR}:
+	mkdir -p $@
