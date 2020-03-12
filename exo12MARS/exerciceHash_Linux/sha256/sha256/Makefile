@@ -1,10 +1,10 @@
-CPPFLAGS=-I../interfaces
+CPPFLAGS=-I../../interfaces
 
 COMPOSANT = sha256
 
 LIBSO = lib${COMPOSANT}.so
 LIBSO_OBJS = ${COMPOSANT}.o
-DESTINATION_DIR = ../lib
+DESTINATION_DIR = ../../lib
 DESTINATION_LIBSO = ${DESTINATION_DIR}/${LIBSO}
 
 include ../../gcc.mk
